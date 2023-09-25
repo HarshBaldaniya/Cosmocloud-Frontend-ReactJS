@@ -94,7 +94,9 @@
 
 @media only screen and (max-width: 1190px) {
   .ant-form {
-    display: block !important;
+    display: flex !important;
+    flex-direction: column !important;
+    max-width: 92% !important;
   }
 
   .ant-typography{
@@ -102,10 +104,30 @@
     margin: 1rem;
   }
 
+  .ant-card-bordered{
+    width: 70% !important;
+  } 
+
+  .inputpart{
+    display: flex !important;
+    flex-direction: row;
+  }
+
+  .ant-form .ant-form-item{
+    margin-right: 1rem;
+  }
+
   .mainpart {
-    width: 95% !important;
+    width: 90% !important;
     margin: 1rem !important;
   }
+}
+
+@media only screen and (max-width: 600px){
+  /* .ant-card-bordered{
+    display: flex !important;
+    flex-direction: column;
+  } */
 }
 
 .ant-card-small>.ant-card-body{
