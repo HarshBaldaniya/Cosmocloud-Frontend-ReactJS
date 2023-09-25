@@ -84,8 +84,8 @@ function App() {
     <Card size="small" key={field.key}>
       <div className="inputpart">
         <Form.Item
-          label="Name"
-          name={[field.name, "name"]}
+          label="Field name"
+          name={[field.name, "Name"]}
           className="partofinput"
           rules={[
             {
@@ -98,20 +98,20 @@ function App() {
         </Form.Item>
 
         <Form.Item
-          label="Category"
+          label="Field type"
           className="partofinput"
-          name={[field.name, "category"]}
+          name={[field.name, "Field type"]}
           rules={[
             {
               required: true,
-              message: "Missing category",
+              message: "Missing field type",
             },
           ]}
         >
           <Select
             defaultValue="Select"
             onChange={(value) =>
-              handleChange(value, [field.name, "category"], index)
+              handleChange(value, [field.name, "Field type"], index)
             }
             options={[
               {
@@ -131,7 +131,7 @@ function App() {
         </Form.Item>
       </div>
 
-      {form.getFieldValue(["items", field.name, "category"]) === "Nested" && (
+      {form.getFieldValue(["Fields", field.name, "Field type"]) === "Nested" && (
         <Form.List name={[field.name, "list"]} initialValue={[]}>
           {(subFields, subOpt) => (
             <div
@@ -173,10 +173,10 @@ function App() {
         }}
         autoComplete="off"
         initialValues={{
-          items: [{}],
+          Fields: [{}],
         }}
       >
-        <Form.List name="items">
+        <Form.List name="Fields">
           {(fields, { add }) => (
             <div
               className="mainpart"
