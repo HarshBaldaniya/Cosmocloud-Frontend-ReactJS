@@ -10,7 +10,7 @@ This is a simple React frontend project that allows users to create and manage a
 
 ## Demo
 
-To see a demo of this project, check out this [Live](https://cosmocloud-frontend-react-js.vercel.app/). But for this we need to give authenticated.
+To see a demo of this project, check out this [Live](https://cosmocloud-frontend-react-js.vercel.app/). 
 
 ## Features
 
