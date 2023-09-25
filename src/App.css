@@ -36,3 +36,100 @@
     transform: rotate(360deg);
   }
 }
+
+#input-part {
+  margin: 5px;
+  border-radius: 6px;
+}
+
+.selct-part {
+  margin: 0 5px 0 0;
+}
+
+.catain {
+  /* background-color: rebeccapurple; */
+  display: flex;
+  width: 50%;
+  align-items: center;
+  padding: 0 5px;
+}
+
+.btn-part {
+  margin: 0 5px 0 0;
+}
+
+.inputpart {
+  display: flex;
+  /* margin-bottom: 0 8px 8px 8px; */
+}
+
+.ant-card-bordered {
+  border: none !important;
+  margin: 5rem;
+}
+
+.partofinput {
+  margin-bottom: 0px !important;
+  width: 70%;
+  /* margin: 5rem; */
+}
+
+.ant-form {
+  max-width: 100% !important;
+  display: flex;
+  justify-content: space-around;
+}
+
+.ant-typography{
+  width: 35% !important;
+}
+
+.ant-form-horizontal .ant-form-item-control{
+  width: 20rem;
+}
+
+.ant-form-item{
+  display: flex;
+}
+
+@media only screen and (max-width: 1190px) {
+  .ant-form {
+    display: block !important;
+  }
+
+  .ant-typography{
+    width: 95% !important;
+    margin: 1rem;
+  }
+
+  .mainpart {
+    width: 95% !important;
+    margin: 1rem !important;
+  }
+}
+
+.ant-card-small>.ant-card-body{
+  padding: 0 8px 8px 8px !important;
+}
+
+.ant-input{
+  margin: 0 8px 8px 8px !important;
+}
+
+.ant-card-body{
+  /* display: flex !important; */
+}
+
+.btnpartsmain{
+  margin: 8px;
+}
+
+.titlename{
+  display: flex;
+  margin: 2rem 2rem;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: xx-large;
+  text-align: center;
+}
