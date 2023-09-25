@@ -23,9 +23,9 @@ function App() {
     try {
       const formData = await form.validateFields();
       const formDataJson = JSON.stringify(formData, null, 2);
-      setFormDataJson(formDataJson); 
+      setFormDataJson(formDataJson);
 
-      Cookies.set("formData", formDataJson, { expires: 1 }); 
+      Cookies.set("formData", formDataJson, { expires: 1 });
 
       message.success("Form data saved successfully!");
     } catch (error) {
@@ -131,7 +131,8 @@ function App() {
         </Form.Item>
       </div>
 
-      {form.getFieldValue(["Fields", field.name, "Field type"]) === "Nested" && (
+      {form.getFieldValue(["Fields", field.name, "Field type"]) ===
+        "Nested" && (
         <Form.List name={[field.name, "list"]} initialValue={[]}>
           {(subFields, subOpt) => (
             <div
@@ -156,62 +157,71 @@ function App() {
 
   return (
     <div>
-      <div className="titlename">
-        <h1>Welcome to Reactjs Frontend Task</h1>
+      <div className="titlenamemobile">
+        <h1>Please open in full screen mode for better view</h1>
       </div>
-      <Form
-        labelCol={{
-          span: 6,
-        }}
-        wrapperCol={{
-          span: 18,
-        }}
-        form={form}
-        name="dynamic_form_complex"
-        style={{
-          maxWidth: 600,
-        }}
-        autoComplete="off"
-        initialValues={{
-          Fields: [{}],
-        }}
-      >
-        <Form.List name="Fields">
-          {(fields, { add }) => (
-            <div
-              className="mainpart"
-              style={{
-                display: "flex",
-                // rowGap: 16,
-                flexDirection: "column",
-                width: "60%",
-              }}
-            >
-              {fields.map((field, index) => renderFormItem(field, index))}
-              <Button type="dashed" onClick={() => add()} block>
-                + Add Item
-              </Button>
-            </div>
-          )}
-        </Form.List>
+      <div className="mainpartmobile">
+        <div className="titlename">
+          <h1>Welcome to Reactjs Frontend Task</h1>
+        </div>
+        <Form
+          labelCol={{
+            span: 6,
+          }}
+          wrapperCol={{
+            span: 18,
+          }}
+          form={form}
+          name="dynamic_form_complex"
+          style={{
+            maxWidth: 600,
+          }}
+          autoComplete="off"
+          initialValues={{
+            Fields: [{}],
+          }}
+        >
+          <Form.List name="Fields">
+            {(fields, { add }) => (
+              <div
+                className="mainpart"
+                style={{
+                  display: "flex",
+                  // rowGap: 16,
+                  flexDirection: "column",
+                  width: "60%",
+                }}
+              >
+                {fields.map((field, index) => renderFormItem(field, index))}
+                <Button type="dashed" onClick={() => add()} block>
+                  + Add Item
+                </Button>
+              </div>
+            )}
+          </Form.List>
 
-        <Form.Item noStyle shouldUpdate>
-          {() => (
-            <Typography className="typopart">
-              <pre>{JSON.stringify(form.getFieldsValue(), null, 2)}</pre>
-            </Typography>
-          )}
-        </Form.Item>
-      </Form>
-      <Button type="primary" onClick={handleSubmit} className="btnpartsmain">
-        Save Form Data
-      </Button>
-      <Button type="danger" onClick={handleReset} lassName="btnpartsmain">
-        Reset Form
-      </Button>
-      <Button type="primary" onClick={handleDownload} className="btnpartsmain">
-        Download JSON
-      </Button>
+          <Form.Item noStyle shouldUpdate>
+            {() => (
+              <Typography className="typopart">
+                <pre>{JSON.stringify(form.getFieldsValue(), null, 2)}</pre>
+              </Typography>
+            )}
+          </Form.Item>
+        </Form>
+        <Button type="primary" onClick={handleSubmit} className="btnpartsmain">
+          Save Form Data
+        </Button>
+        <Button type="danger" onClick={handleReset} lassName="btnpartsmain">
+          Reset Form
+        </Button>
+        <Button
+          type="primary"
+          onClick={handleDownload}
+          className="btnpartsmain"
+        >
+          Download JSON
+        </Button>
+      </div>
     </div>
   );
 }

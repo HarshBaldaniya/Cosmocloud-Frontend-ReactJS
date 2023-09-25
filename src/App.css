@@ -92,6 +92,10 @@
   display: flex;
 }
 
+.titlenamemobile{
+  display: none;
+}
+
 @media only screen and (max-width: 1190px) {
   .ant-form {
     display: flex !important;
@@ -121,13 +125,22 @@
     width: 90% !important;
     margin: 1rem !important;
   }
-}
 
-@media only screen and (max-width: 600px){
-  /* .ant-card-bordered{
-    display: flex !important;
-    flex-direction: column;
-  } */
+  .titlenamemobile{
+    display: flex;
+    margin: 2rem 2rem;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: xx-large;
+    color: red;
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  .mainpartmobile{
+    opacity: .4;
+  }
 }
 
 .ant-card-small>.ant-card-body{
@@ -144,6 +157,7 @@
 
 .btnpartsmain{
   margin: 8px;
+  color: black;
 }
 
 .titlename{
